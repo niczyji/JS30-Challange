@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drum Kit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="keys" id="keys">
+      <div data-key="81" class="key play">q</div>
+      <div data-key="87" class="key">w</div>
+      <div data-key="69" class="key">e</div>
+      <div data-key="82" class="key">r</div>
+      <div data-key="84" class="key">t</div>
+      <div data-key="90" class="key">z</div>
+    </div>
+
+    <audio
+      data-key="81"
+      src="./assets/drumkit/6LACK - The Cave Open Hat.wav"
+    ></audio>
+    <audio
+      data-key="87"
+      src="./assets/drumkit/Denzel Curry, 6LACK - The Cave Kick.wav"
+    ></audio>
+    <audio
+      data-key="69"
+      src="./assets/drumkit/Freddie Gibbs, Vince Staples - The Cave 808.wav"
+    ></audio>
+    <audio
+      data-key="82"
+      src="./assets/drumkit/Maxo Kream - The Cave Clap.wav"
+    ></audio>
+    <audio
+      data-key="84"
+      src="./assets/drumkit/Maxo Kream - The Cave Cowbell.wav"
+    ></audio>
+    <audio
+      data-key="90"
+      src="./assets/drumkit/Rico Nasty - The Cave Congo.wav"
+    ></audio>
+
+    <script src="app.js"></script>
+  </body>
+</html>
