@@ -1,13 +1,28 @@
-html {
-  font-family: "Fira Mono", monospace;
+:root {
+  --base: #ffc600;
+  --spacing: 10px;
+  --blur: 10px;
 }
 
-body {
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url("./assets/img/lucian-alexe-f2xfTOv0p9Y-unsplash.jpg");
+html {
   display: flex;
-  min-height: 100vh;
   align-items: center;
+  justify-content: center;
+  font-family: "Fira Mono", monospace;
+  text-align: center;
+  font-size: 40px;
+}
+
+.h1 {
+  color: var(--base);
+}
+
+img {
+  margin: 50px;
+  object-fit: contain;
+  height: 500px;
+  width: 800px;
+  padding: var(--spacing);
+  background: var(--base);
+  filter: blur(var(--blur));
 }
