@@ -4,7 +4,7 @@ let blurInput = document.querySelector('input[name="blur"]');
 let baseColorInput = document.querySelector('input[name="base"]');
 let root = document.documentElement;
 
-document.addEventListener("change", function (e) {
+function updateCSSVar(e) {
   let spacingValue = spacingInput.value + "px"; // Append 'px' to the value
   root.style.setProperty("--spacing", spacingValue);
 
@@ -13,4 +13,6 @@ document.addEventListener("change", function (e) {
 
   let baseValue = baseColorInput.value;
   root.style.setProperty("--base", baseValue);
-});
+}
+
+document.addEventListener("change", updateCSSVar);
