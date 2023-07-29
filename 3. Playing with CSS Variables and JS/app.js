@@ -16,3 +16,17 @@ function updateCSSVar(e) {
 }
 
 document.addEventListener("change", updateCSSVar);
+
+// Better solution
+/* const inputs = document.querySelectorAll(".header input");
+
+function handleUpdate() {
+  const suffix = this.dataset.sizing || "";
+  document.documentElement.style.setProperty(
+    `--${this.name}`,
+    this.value + suffix
+  );
+}
+
+inputs.forEach((input) => input.addEventListener("change", handleUpdate));
+inputs.forEach((input) => input.addEventListener("mousemove", handleUpdate)); */
