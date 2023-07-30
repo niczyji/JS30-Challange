@@ -69,8 +69,8 @@ const bornIn1800 = inventors.filter(
 //2. Give us an array of the inventors first and last names
 const firstAndLast = inventors.map((map) => map.first + " " + map.last);
 /* console.table(firstAndLast); */
-//3. Sort the inventors by birthdate, oldest to youngest
 
+//3. Sort the inventors by birthdate, oldest to youngest
 const oldestToYoungest = inventors.sort(function (a, b) {
   if (a.year > b.year) {
     return 1;
@@ -78,11 +78,29 @@ const oldestToYoungest = inventors.sort(function (a, b) {
     return -1;
   }
 });
+/* console.table(oldestToYoungest); */
 
-console.table(oldestToYoungest);
 //4. How many Years did all the inventors live?
+const investorsTotalAge = inventors.reduce(function (total, investor) {
+  return total + investor.passed - investor.year;
+}, 0);
+/* console.log(investorsTotalAge); */
+
 //5. Sort the inventors by years lived
-//6. Create a list of Boulevards in Paris thah contain 'de' anywhere in the name
+const sortInvestorsByAge = inventors.sort(function (a, b) {
+  let investorA = a.passed - a.year;
+
+  let investorB = b.passed - b.year;
+
+  if (investorA > investorB) {
+    return 1;
+  } else {
+    return -1;
+  }
+});
+/* console.table(sortInvestorsByAge); */
+
+//6. Create a list of Boulevards in Paris that contain 'de' anywhere in the name
 //7. Sort exercise,  Sort the people alphabetically by last name
 //8. Reduce exercise, Sum up the instances of each of these
 
@@ -93,7 +111,7 @@ const data = [
   "truck",
   "bike",
   "walk",
-  "car",
+  "car",mw-category
   "van",
   "bike",
   "walk",
