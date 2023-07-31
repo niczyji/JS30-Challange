@@ -60,34 +60,51 @@ const people = [
   "Zheng, He",
 ];
 
+const data = [
+  "car",
+  "car",
+  "truck",
+  "truck",
+  "bike",
+  "walk",
+  "car",
+  "van",
+  "bike",
+  "walk",
+  "car",
+  "van",
+  "car",
+  "truck",
+]; /* console.table(firstAndLast); */
+
 //1. Filter the list of inventors for those who were born in the 1800
-const bornIn1800 = inventors.filter(
+/* const bornIn1800 = inventors.filter(
   (inventor) => inventor.year >= 1800 && inventor.year <= 1900
-);
+); */
 /* console.table(bornIn1800); */
 
 //2. Give us an array of the inventors first and last names
-const firstAndLast = inventors.map((map) => map.first + " " + map.last);
-/* console.table(firstAndLast); */
+/* const firstAndLast = inventors.map((map) => map.first + " " + map.last);
+ */
 
 //3. Sort the inventors by birthdate, oldest to youngest
-const oldestToYoungest = inventors.sort(function (a, b) {
+/* const oldestToYoungest = inventors.sort(function (a, b) {
   if (a.year > b.year) {
     return 1;
   } else {
     return -1;
   }
-});
+}); */
 /* console.table(oldestToYoungest); */
 
 //4. How many Years did all the inventors live?
-const investorsTotalAge = inventors.reduce(function (total, investor) {
+/* const investorsTotalAge = inventors.reduce(function (total, investor) {
   return total + investor.passed - investor.year;
-}, 0);
+}, 0); */
 /* console.log(investorsTotalAge); */
 
 //5. Sort the inventors by years lived
-const sortInvestorsByAge = inventors.sort(function (a, b) {
+/* const sortInvestorsByAge = inventors.sort(function (a, b) {
   let investorA = a.passed - a.year;
 
   let investorB = b.passed - b.year;
@@ -97,26 +114,34 @@ const sortInvestorsByAge = inventors.sort(function (a, b) {
   } else {
     return -1;
   }
-});
+}); */
 /* console.table(sortInvestorsByAge); */
 
 //6. Create a list of Boulevards in Paris that contain 'de' anywhere in the name
-//7. Sort exercise,  Sort the people alphabetically by last name
-//8. Reduce exercise, Sum up the instances of each of these
+/* const category = document.querySelector(".mw-category");
+const links = Array.from(category.querySelectorAll("a"));
+const de = links
+  .map((link) => link.textContent)
+  .filter((streetName) => streetName.includes("de")); */
 
-const data = [
-  "car",
-  "car",
-  "truck",
-  "truck",
-  "bike",
-  "walk",
-  "car",mw-category
-  "van",
-  "bike",
-  "walk",
-  "car",
-  "van",
-  "car",
-  "truck",
-];
+//7. Sort exercise,  Sort the people alphabetically by First name
+/* const peopleSort = people.sort(function (a, b) {
+  if (a.split(", ") > b.split(", ")) {
+    return 1;
+  } else {
+    return -1;
+  }
+}); */
+/* console.table(peopleSort); */
+
+//8. Reduce exercise, Sum up the instances of each of these
+/* const sumData = data.reduce((obj, item) => {
+  console.log(`Obj: ${obj}`);
+  console.log(`Item: ${item}`);
+  if (!obj[item]) {
+    obj[item] = 0;
+  }
+  obj[item]++;
+  return obj;
+}, {});
+console.log(sumData); */
