@@ -41,19 +41,19 @@ body {
 }
 
 .panel1 {
-  background-image: url("https://source.unsplash.com/0vZF6FRmDX8/1500x1500");
+  background-image: url("./assets/img/photo-1597092948155-28e2af98d30c.jpg");
 }
 .panel2 {
-  background-image: url("https://source.unsplash.com/30axxwq8Jmg/1500x1500");
+  background-image: url("./assets/img/photo-1643621720488-33d8487d396b.jpg");
 }
 .panel3 {
-  background-image: url("https://source.unsplash.com/9P2-bzjvIHk/1500x1500");
+  background-image: url("./assets/img/photo-1523565152756-59eac4c1489c.jpg");
 }
 .panel4 {
-  background-image: url("https://source.unsplash.com/dGdWD0YIO78/1500x1500");
+  background-image: url("./assets/img/photo-1675891282078-0e681d07b80e.jpg");
 }
 .panel5 {
-  background-image: url("https://source.unsplash.com/tPBusKqrcdc/1500x1500");
+  background-image: url("./assets/img/photo-1613052903572-fe85e50d5d46.jpg");
 }
 
 /* Flex Itesm */
