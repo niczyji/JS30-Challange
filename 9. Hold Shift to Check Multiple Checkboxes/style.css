@@ -1,0 +1,65 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  font-family: "Fira Mono", monospace;
+}
+
+body {
+  margin: 20px;
+  color: #4682a9;
+  background: rgb(255, 219, 84);
+  background: linear-gradient(137deg, #f6f4eb, #91c8e4);
+  font: 500 1.2em/1.2 "Roboto", sans-serif;
+}
+
+.container {
+  max-width: 450px;
+  margin: 0 auto;
+  border-top: 5px solid #4682a9;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  user-select: none;
+}
+
+h1 {
+  margin: 0;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.4);
+  font-size: 1.8em;
+  text-align: center;
+  font-family: "Fira Mono", monospace;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  border-top: 1px dashed #fff;
+  cursor: pointer;
+  font-family: "Fira Mono", monospace;
+}
+
+.item input {
+  margin: 0;
+  height: 25px;
+  width: 25px;
+}
+
+.item label {
+  padding: 15px 0 15px 10px;
+}
+
+.item:hover,
+input:focus + label {
+  background-color: rgba(255, 255, 255, 0.2);
+}
