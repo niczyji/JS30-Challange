@@ -59,6 +59,10 @@ h1 {
   padding: 15px 0 15px 10px;
 }
 
+.item input[type="checkbox"]:checked + label {
+  text-decoration: line-through;
+}
+
 .item:hover,
 input:focus + label {
   background-color: rgba(255, 255, 255, 0.2);
