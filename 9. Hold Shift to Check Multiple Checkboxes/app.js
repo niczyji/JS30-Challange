@@ -10,17 +10,27 @@ function handleCheck(e) {
 
   // If the shift key is pressed and this checkbox is checked
   if (e.shiftKey && this.checked) {
-    // Loop through all the checkboxes
     items.forEach((checkbox) => {
       // If the current checkbox is the same as the current checkbox being clicked or the last checked checkbox
       if (checkbox === this || checkbox === lastChecked) {
-        // Toggle the inBetween flag to determine if we are in between the two selected elements
         inBetween = !inBetween;
       }
       // If we are in between two selected elements
       if (inBetween) {
-        // Set the checked property of the checkbox to true to select it
         checkbox.checked = true;
+      }
+    });
+  }
+  // Check if Shift is pressed and the checkbox is unchecked
+  else if (e.shiftKey && !this.checked) {
+    items.forEach((checkbox) => {
+      // Check if it's the current or the last checked checkbox
+      if (checkbox === this || checkbox === lastChecked) {
+        inBetween = !inBetween;
+      }
+      // Uncheck all the boxes between the two points
+      if (inBetween) {
+        checkbox.checked = false;
       }
     });
   }
