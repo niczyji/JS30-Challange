@@ -10,38 +10,64 @@
       href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="player">
-      <video src="" class="player__video viewer"></video>
-      <div class="player__controls">
-        <div class="progress">
-          <div class="progress__filled"></div>
-          <button class="player__button toggle"></button>
-          <input
-            type="range"
-            name="volume"
-            class="player__slider"
-            min="0"
-            max="1"
-            step="0.05"
-            value="1"
-          />
-          <input
-            type="range"
-            name="playbackRate"
-            class="player__slider"
-            min="0"
-            max="1"
-            step="0.05"
-            value="1"
-          />
-          <button data-skip="-10" class="player__button"><< 10s</button>
-          <button data-skip="25" class="player__button">25s >></button>
-        </div>
+      <video
+        src="assets/video/videoplayback.mp4"
+        class="player-video-viewer"
+      ></video>
+      <div class="player-controls">
+        <input
+          type="range"
+          id="progress-bar"
+          name="currentTime"
+          class="player-slider"
+          value="0"
+          min="0"
+        />
+
+        <button id="toggle-video">
+          <i class="fas fa-play toggle"></i>
+        </button>
+
+        <button id="toggle-mute">
+          <i class="fas fa-volume-up"></i>
+        </button>
+
+        <input
+          id="volume-slider"
+          type="range"
+          name="volume"
+          class="player-slider"
+          value="0.5"
+          min="0"
+          max="1"
+          step="0.05"
+        />
+
+        <input
+          type="range"
+          name="playbackRate"
+          class="player-slider"
+          value="1"
+          min="0.5"
+          max="2"
+          step="0.1"
+        />
+
+        <button data-skip="-10" class="playback-btn"><< 10s</button>
+        <button data-skip="25" class="playback-btn">25s >></button>
+
+        <button id="fullscreen">
+          <i class="fas fa-expand"></i>
+        </button>
       </div>
-      ed
     </div>
     <script src="app.js"></script>
   </body>
