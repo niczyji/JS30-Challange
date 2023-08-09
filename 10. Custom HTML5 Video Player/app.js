@@ -81,6 +81,7 @@ function playbackFunction() {
 }
 
 function setFullscreen() {
+  // set fullscreen
   if (document.fullscreenElement) {
     document.exitFullscreen();
     videoPlayer.style.border = "";
