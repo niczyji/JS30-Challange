@@ -26,3 +26,45 @@ body {
   background: linear-gradient(137deg, var(--lightyellow), var(--lightblue));
   overflow: hidden;
 }
+
+.side-wrap {
+  max-width: 960px;
+  margin: 100px auto;
+  background-color: #393e46;
+  padding: 40px;
+  text-align: justify;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+}
+
+.align-right {
+  float: right;
+  margin-left: 20px;
+}
+
+.align-left {
+  float: left;
+  margin-left: 20px;
+}
+
+.slide-in {
+  opacity: 0;
+  transition: all .5s;
+}
+
+.align-left.slide-in {
+  transform: translate(-30%) scale(0.95);
+}
+
+.align-right.slide-in {
+  transform: translate(30%) scale(0.95);
+}
+
+.slide-in.active {
+  opacity: 1;
+  transform: translate(0%) scale(1);
+
+}

@@ -1,12 +1,18 @@
-const pressed = [];
-const secredCode = "code";
-
-window.addEventListener('keyup', (e)=> {
-  pressed.push(e.key);
-  pressed.splice(-secredCode.length - 1, pressed.length - secredCode.length)
-  if (pressed.join('').includes(secredCode)) {
-    console.log("match");
-    cornify_add();
+function debounce(func, wait = 20, immediate = true) {
+  var timeout;
+  return function() {
+    var context = this, args = arguments;
+    var later = function() {
+      timeout = null;
+      if (!immediate) {
+        func.apply(context, args);
+      };
+      var callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      if (callNow) {
+        func.apply(context, args);
+      }
+    }
   }
-  console.log(pressed);
-})
+}
